@@ -4,8 +4,9 @@
 [![Total Downloads](https://img.shields.io/packagist/dt/pixelpeter/laravel-genderize-api-client.svg?style=flat-square)](https://packagist.org/packages/pixelpeter/laravel-genderize-api-client)
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
 [![Travis Build](https://img.shields.io/travis/pixelpeter/laravel-genderize-api-client/master.svg?style=flat-square)](https://api.travis-ci.com/pixelpeter/laravel-genderize-api-client)
-[![Scrutinizer Quality](https://img.shields.io/scrutinizer/g/pixelpeter/laravel-genderize-api-client.svg?style=flat-square)](https://scrutinizer-ci.com/g/pixelpeter/laravel-genderize-api-client)
-[![Scrutinizer Build](https://img.shields.io/scrutinizer/build/g/pixelpeter/laravel-genderize-api-client.svg?style=flat-square)](https://scrutinizer-ci.com/g/pixelpeter/laravel-genderize-api-client)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/pixelpeter/laravel-genderize-api-client/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/pixelpeter/laravel-genderize-api-client/?branch=master)
+[![Build Status](https://scrutinizer-ci.com/g/pixelpeter/laravel-genderize-api-client/badges/build.png?b=master)](https://scrutinizer-ci.com/g/pixelpeter/laravel-genderize-api-client/build-status/master)
+[![Code Intelligence Status](https://scrutinizer-ci.com/g/pixelpeter/laravel-genderize-api-client/badges/code-intelligence.svg?b=master)](https://scrutinizer-ci.com/code-intelligence)
 [![Coverage Status](https://coveralls.io/repos/github/pixelpeter/laravel-genderize-api-client/badge.svg?branch=master)](https://coveralls.io/github/pixelpeter/laravel-genderize-api-client?branch=master)
 
 A simple Laravel 8+ client for the [Genderize.io API](https://genderize.io/).
