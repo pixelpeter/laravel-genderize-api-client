@@ -1,0 +1,4 @@
+/build export-ignore
+/.gitattributes export-ignore
+/.scrutinizer.yml export-ignore
+/.travis.yml export-ignore
