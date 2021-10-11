@@ -69,7 +69,7 @@ class GenderizeClientTest extends TestCase
         $this->client->name(['John', 'Jane']);
         $names = $this->getPrivateProperty(\Pixelpeter\Genderize\GenderizeClient::class, 'names');
 
-        $this->assertIsArray($names->getValue($this->client));
+        $this->assertTrue( count($names->getValue($this->client)) === 2 );
         $this->assertSame('John', $names->getValue($this->client)[0]);
         $this->assertSame('Jane', $names->getValue($this->client)[1]);
     }
@@ -84,7 +84,7 @@ class GenderizeClientTest extends TestCase
         $this->client->names(['John', 'Jane']);
         $names = $this->getPrivateProperty(\Pixelpeter\Genderize\GenderizeClient::class, 'names');
 
-        $this->assertIsArray($names->getValue($this->client));
+        $this->assertTrue( count($names->getValue($this->client)) === 2 );
         $this->assertSame('John', $names->getValue($this->client)[0]);
         $this->assertSame('Jane', $names->getValue($this->client)[1]);
     }
