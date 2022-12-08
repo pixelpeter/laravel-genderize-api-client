@@ -18,10 +18,12 @@ class Meta extends BaseModel
      */
     public function __construct($data)
     {
+        $headers = array_change_key_case($data->headers, CASE_LOWER);
+
         $this->code = (int)$data->code;
-        $this->limit = (int)$data->headers['X-Rate-Limit-Limit'];
-        $this->remaining = (int)$data->headers['X-Rate-Limit-Remaining'];
-        $this->reset = $this->setDate($data);
+        $this->limit = (int)$headers['x-rate-limit-limit'];
+        $this->remaining = (int)$headers['x-rate-limit-remaining'];
+        $this->reset = $this->setDate($headers['x-rate-reset']);
     }
 
     /**
@@ -32,7 +34,6 @@ class Meta extends BaseModel
     protected function setDate($data)
     {
         $date = Carbon::now();
-
-        return $date->addSeconds($data->headers['X-Rate-Reset']);
+        return $date->addSeconds($data);
     }
 }
