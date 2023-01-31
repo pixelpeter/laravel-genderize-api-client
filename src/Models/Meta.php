@@ -23,7 +23,7 @@ class Meta extends BaseModel
         $this->code = (int)$data->code;
         $this->limit = (int)$headers['x-rate-limit-limit'];
         $this->remaining = (int)$headers['x-rate-limit-remaining'];
-        $this->reset = $this->setDate($headers['x-rate-reset']);
+        $this->reset = $this->setDate($headers['x-rate-limit-reset']);
     }
 
     /**
