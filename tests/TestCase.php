@@ -2,8 +2,8 @@
 
 namespace Pixelpeter\Genderize;
 
-use ReflectionClass;
 use Illuminate\Contracts\Console\Kernel;
+use ReflectionClass;
 
 abstract class TestCase extends \Illuminate\Foundation\Testing\TestCase
 {
@@ -21,7 +21,7 @@ abstract class TestCase extends \Illuminate\Foundation\Testing\TestCase
      */
     public function createApplication()
     {
-        $app = require __DIR__ . '/../vendor/laravel/laravel/bootstrap/app.php';
+        $app = require __DIR__.'/../vendor/laravel/laravel/bootstrap/app.php';
 
         $app->register(\Pixelpeter\Genderize\GenderizeServiceProvider::class);
 
@@ -34,8 +34,9 @@ abstract class TestCase extends \Illuminate\Foundation\Testing\TestCase
      * getPrivateProperty
      *
      * @author    Joe Sexton <joe@webtipblog.com>
-     * @param    string $className
-     * @param    string $propertyName
+     *
+     * @param  string  $className
+     * @param  string  $propertyName
      * @return    \ReflectionProperty
      */
     public function getPrivateProperty($className, $propertyName)

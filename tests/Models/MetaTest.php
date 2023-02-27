@@ -1,4 +1,6 @@
-<?php namespace Pixelpeter\Genderize\Test;
+<?php
+
+namespace Pixelpeter\Genderize\Test;
 
 use Carbon\Carbon;
 use Pixelpeter\Genderize\Models\Meta;
@@ -20,8 +22,8 @@ class MetaTest extends \PHPUnit\Framework\TestCase
             'headers' => [
                 'X-Rate-Limit-Limit' => 7000,
                 'X-Rate-Limit-Remaining' => 1000,
-                'X-Rate-Reset' => 0
-            ]
+                'X-Rate-Limit-Reset' => 0,
+            ],
         ];
 
         $this->meta = new Meta($data);

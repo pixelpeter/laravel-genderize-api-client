@@ -3,7 +3,6 @@
 namespace Pixelpeter\Genderize;
 
 use Mockery;
-use Unirest\Request;
 use Unirest\Response;
 
 class GenderizeClientTest extends TestCase
@@ -33,12 +32,12 @@ class GenderizeClientTest extends TestCase
         $this->response = new Response(
             200,
             '{"name":"B\u00e4rbel","gender":"female","probability":"0.75","count":4,"country_id":"DE"}',
-            "content-type: text/html; charset=UTF-8\r\n" .
-            "X-Frame-Options: SAMEORIGIN\r\n" .
-            "X-Powered-By: PHP/5.5.9-1ubuntu4.6\r\n" .
-            "X-Rate-Limit-Limit: 1000\r\n" .
-            "X-Rate-Limit-Remaining: 970\r\n" .
-            "X-Rate-Reset: 79614\r\n"
+            "content-type: text/html; charset=UTF-8\r\n".
+            "X-Frame-Options: SAMEORIGIN\r\n".
+            "X-Powered-By: PHP/5.5.9-1ubuntu4.6\r\n".
+            "X-Rate-Limit-Limit: 1000\r\n".
+            "X-Rate-Limit-Remaining: 970\r\n".
+            "X-Rate-Limit-Reset: 79614\r\n"
         );
 
         $this->request = Mockery::mock('\Unirest\Request');

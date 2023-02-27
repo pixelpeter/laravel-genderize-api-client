@@ -1,4 +1,6 @@
-<?php namespace Pixelpeter\Genderize\Test;
+<?php
+
+namespace Pixelpeter\Genderize\Test;
 
 use Pixelpeter\Genderize\Models\Name;
 
@@ -14,11 +16,11 @@ class NameTest extends \PHPUnit\Framework\TestCase
      */
     public function setUp(): void
     {
-        $data = (object)[
+        $data = (object) [
             'gender' => 'male',
             'name' => 'John',
             'probability' => 0.98,
-            'count' => 1234
+            'count' => 1234,
         ];
 
         $this->name = new Name($data);
@@ -44,7 +46,7 @@ class NameTest extends \PHPUnit\Framework\TestCase
      */
     public function defaults_added_correctly()
     {
-        $data = (object)[];
+        $data = (object) [];
 
         $name = new Name($data);
 

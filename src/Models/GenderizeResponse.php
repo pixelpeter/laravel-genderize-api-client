@@ -7,6 +7,7 @@ use Illuminate\Support\Collection;
 class GenderizeResponse extends BaseModel
 {
     protected $meta;
+
     protected $result;
 
     public function __construct($response)
