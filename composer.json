@@ -18,7 +18,7 @@
     }
   ],
   "require": {
-    "php" : "^8.0|^8.1|^8.2",
+    "php" : "^8.0",
     "mashape/unirest-php": "^3.0"
   },
   "autoload": {
@@ -38,7 +38,7 @@
     "phpunit/phpunit": "^9.5.10",
     "mockery/mockery": "^1.4.0",
     "php-coveralls/php-coveralls": "^2.1",
-    "laravel/laravel": "8.*|9.*|10.*"
+    "laravel/laravel": "8.*"
   },
   "extra": {
     "laravel": {
