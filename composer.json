@@ -18,7 +18,7 @@
     }
   ],
   "require": {
-    "php" : "^8.0|^8.1",
+    "php" : "^8.0|^8.1|^8.2",
     "mashape/unirest-php": "^3.0",
     "carbon-cli/carbon-cli": "^1.2"
   },
@@ -39,7 +39,7 @@
     "phpunit/phpunit": "^9.5.10",
     "mockery/mockery": "^1.4.0",
     "php-coveralls/php-coveralls": "^2.1",
-    "laravel/laravel": "8.*|9.*"
+    "laravel/laravel": "8.*|9.*|10.*"
   },
   "extra": {
     "laravel": {
