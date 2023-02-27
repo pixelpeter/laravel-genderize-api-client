@@ -20,7 +20,7 @@ class GenderizeResponseTest extends \PHPUnit\Framework\TestCase
             "X-Powered-By: PHP/5.5.9-1ubuntu4.6\r\n" .
             "X-Rate-Limit-Limit: 1000\r\n" .
             "X-Rate-Limit-Remaining: 970\r\n" .
-            "X-Rate-Reset: 79614\r\n"
+            "X-Rate-Limit-Reset: 79614\r\n"
         );
 
         $genderizeResponse = new GenderizeResponse($response);
@@ -44,7 +44,7 @@ class GenderizeResponseTest extends \PHPUnit\Framework\TestCase
             "X-Powered-By: PHP/5.5.9-1ubuntu4.6\r\n" .
             "X-Rate-Limit-Limit: 1000\r\n" .
             "X-Rate-Limit-Remaining: 970\r\n" .
-            "X-Rate-Reset: 79614\r\n"
+            "X-Rate-Limit-Reset: 79614\r\n"
         );
 
         $genderizeResponse = new GenderizeResponse($response);
