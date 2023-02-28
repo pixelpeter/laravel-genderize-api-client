@@ -39,7 +39,8 @@
     "phpunit/phpunit": "^9.5.10",
     "mockery/mockery": "^1.4.0",
     "php-coveralls/php-coveralls": "^2.1",
-    "laravel/laravel": "8.*|9.*|10.*"
+    "laravel/laravel": "8.*|9.*|10.*",
+    "phpstan/phpstan": "^1.10"
   },
   "extra": {
     "laravel": {
