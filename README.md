@@ -21,6 +21,7 @@ It provides a fluent interface for easy request building.
 | 5.6     | 7.3, 7.2, 7.1 | https://github.com/pixelpeter/laravel5-genderize-api-client | 2.0.x       |
 | 5.5     | 7.2, 7.1, 7.0 | https://github.com/pixelpeter/laravel5-genderize-api-client | 1.1.x/2.0.x |
 
+
 ## Installation
 
 ### Step 1: Install Through Composer
