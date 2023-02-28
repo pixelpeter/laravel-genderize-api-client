@@ -4,10 +4,8 @@
 [![Total Downloads](https://img.shields.io/packagist/dt/pixelpeter/laravel-genderize-api-client.svg?style=flat-square)](https://packagist.org/packages/pixelpeter/laravel-genderize-api-client)
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg?style=flat-square)](LICENSE.md)
 [![Travis Build](https://img.shields.io/travis/pixelpeter/laravel-genderize-api-client/master.svg?style=flat-square)](https://api.travis-ci.com/pixelpeter/laravel-genderize-api-client)
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/pixelpeter/laravel-genderize-api-client/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/pixelpeter/laravel-genderize-api-client/?branch=master)
-[![Build Status](https://scrutinizer-ci.com/g/pixelpeter/laravel-genderize-api-client/badges/build.png?b=master)](https://scrutinizer-ci.com/g/pixelpeter/laravel-genderize-api-client/build-status/master)
-[![Code Intelligence Status](https://scrutinizer-ci.com/g/pixelpeter/laravel-genderize-api-client/badges/code-intelligence.svg?b=master)](https://scrutinizer-ci.com/code-intelligence)
 [![Coverage Status](https://coveralls.io/repos/github/pixelpeter/laravel-genderize-api-client/badge.svg?branch=master)](https://coveralls.io/github/pixelpeter/laravel-genderize-api-client?branch=master)
+[![Tests](https://github.com/pixelpeter/laravel-genderize-api-client/actions/workflows/run-tests.yml/badge.svg?branch=master)](https://github.com/pixelpeter/laravel-genderize-api-client/actions/workflows/run-tests.yml)
 
 A simple Laravel 8+ client for the [Genderize.io API](https://genderize.io/).
 It provides a fluent interface for easy request building.
@@ -15,11 +13,14 @@ It provides a fluent interface for easy request building.
 ## Version overview
 
 | Laravel | php           | use repository                                              | use branch  |
-| ------  | ------------- | ----------------------------------------------------------  |-------------|
-| 8.x     | 8.0.x         | https://github.com/pixelpeter/laravel-genderize-api-client  | master      |
-| 5.7     | 7.1, 7.2, 7.3 | https://github.com/pixelpeter/laravel5-genderize-api-client | 2.0.x       |
-| 5.6     | 7.1, 7.2, 7.3 | https://github.com/pixelpeter/laravel5-genderize-api-client | 2.0.x       |
-| 5.5     | 7.0, 7.1, 7.2 | https://github.com/pixelpeter/laravel5-genderize-api-client | 1.1.x/2.0.x |
+|---------|---------------| ----------------------------------------------------------  |-------------|
+| 10.x    | 8.2, 8.1      | https://github.com/pixelpeter/laravel-genderize-api-client  | master      |
+| 9.x     | 8.2, 8.1, 8.0 | https://github.com/pixelpeter/laravel-genderize-api-client  | master      |
+| 8.x     | 8.2, 8.1, 8.0 | https://github.com/pixelpeter/laravel-genderize-api-client  | master      |
+| 5.7     | 7.3, 7.2, 7.1 | https://github.com/pixelpeter/laravel5-genderize-api-client | 2.0.x       |
+| 5.6     | 7.3, 7.2, 7.1 | https://github.com/pixelpeter/laravel5-genderize-api-client | 2.0.x       |
+| 5.5     | 7.2, 7.1, 7.0 | https://github.com/pixelpeter/laravel5-genderize-api-client | 1.1.x/2.0.x |
+
 
 ## Installation
 
