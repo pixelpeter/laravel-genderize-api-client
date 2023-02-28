@@ -6,6 +6,9 @@
 [![Travis Build](https://img.shields.io/travis/pixelpeter/laravel-genderize-api-client/master.svg?style=flat-square)](https://api.travis-ci.com/pixelpeter/laravel-genderize-api-client)
 [![Coverage Status](https://coveralls.io/repos/github/pixelpeter/laravel-genderize-api-client/badge.svg?branch=master)](https://coveralls.io/github/pixelpeter/laravel-genderize-api-client?branch=master)
 [![Tests](https://github.com/pixelpeter/laravel-genderize-api-client/actions/workflows/run-tests.yml/badge.svg?branch=master)](https://github.com/pixelpeter/laravel-genderize-api-client/actions/workflows/run-tests.yml)
+[![Fix PHP code style issues](https://github.com/pixelpeter/laravel-genderize-api-client/actions/workflows/fix-php-code-style-issues.yml/badge.svg)](https://github.com/pixelpeter/laravel-genderize-api-client/actions/workflows/fix-php-code-style-issues.yml)
+[![PHPStan](https://github.com/pixelpeter/laravel-genderize-api-client/actions/workflows/phpstan.yml/badge.svg)](https://github.com/pixelpeter/laravel-genderize-api-client/actions/workflows/phpstan.yml)
+[![dependabot-auto-merge](https://github.com/pixelpeter/laravel-genderize-api-client/actions/workflows/dependabot-auto-merge.yml/badge.svg)](https://github.com/pixelpeter/laravel-genderize-api-client/actions/workflows/dependabot-auto-merge.yml)
 
 A simple Laravel 8+ client for the [Genderize.io API](https://genderize.io/).
 It provides a fluent interface for easy request building.
