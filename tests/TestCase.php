@@ -39,7 +39,7 @@ abstract class TestCase extends BaseTestCase
      *
      * @param  string  $className
      * @param  string  $propertyName
-     * @return    \ReflectionProperty
+     * @return \ReflectionProperty
      */
     public function getPrivateProperty($className, $propertyName)
     {
