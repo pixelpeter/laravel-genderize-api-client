@@ -9,9 +9,5 @@
     <include>
       <directory suffix=".php">src/</directory>
     </include>
-    <exclude>
-      <file>./src/WoocommerceServiceProvider.php</file>
-      <file>./src/Facades/Woocommerce.php</file>
-    </exclude>
   </source>
 </phpunit>
