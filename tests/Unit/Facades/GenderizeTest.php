@@ -2,7 +2,6 @@
 
 namespace Pixelpeter\Genderize\Tests\Unit\Facades;
 
-
 use Pixelpeter\Genderize\Facades\Genderize;
 use Pixelpeter\Genderize\Tests\TestCase;
 
