@@ -13,12 +13,12 @@ class GenderizeClient
     protected $names;
 
     /**
-     * @var string The language used for the check
+     * @var string | null The language used for the check
      */
     protected $lang;
 
     /**
-     * @var string The country used for the check
+     * @var string | null The country used for the check
      */
     protected $country;
 
@@ -49,7 +49,7 @@ class GenderizeClient
     /**
      * Fluent setter for names given as string
      *
-     * @param  string  $name
+     * @param  string | array  $name
      * @return $this|GenderizeClient
      */
     public function name($name = '')
@@ -78,7 +78,7 @@ class GenderizeClient
     /**
      * Fluent setter for language
      *
-     * @param  null  $lang
+     * @param  string | null  $lang
      * @return $this
      */
     public function lang($lang = null)
@@ -91,7 +91,7 @@ class GenderizeClient
     /**
      * Fluent setter for country
      *
-     * @param  null  $country
+     * @param  string | null  $country
      * @return $this
      */
     public function country($country = null)
