@@ -1,8 +1,12 @@
 # Changelog
 
 All notable changes for the Laravel 8+ Genderize.io API Client will be documented in this file
-## 11.0.0
-
+## 10.0.0
+- Added support for Laravel 10.x and 11.x<br>
+  *(Laravel 8.x and 9.x support will be in the v8.x tags)*
+- Fix phpstan
+- Add coverage tracking by coveralls
+- General cleanup of the codebase
 
 ## 8.1.1
 - Fix Genderize link by @Stroemgren in #8
