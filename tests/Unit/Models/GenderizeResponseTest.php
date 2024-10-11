@@ -1,6 +1,6 @@
 <?php
 
-namespace Pixelpeter\Genderize\Test;
+namespace Pixelpeter\Genderize\Tests\Unit\Models;
 
 use Pixelpeter\Genderize\Models\GenderizeResponse;
 use Unirest\Response;

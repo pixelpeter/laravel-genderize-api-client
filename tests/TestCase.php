@@ -1,11 +1,13 @@
 <?php
 
-namespace Pixelpeter\Genderize;
+namespace Pixelpeter\Genderize\Tests;
 
 use Illuminate\Contracts\Console\Kernel;
+use Illuminate\Foundation\Testing\TestCase as BaseTestCase;
+use Pixelpeter\Genderize\GenderizeServiceProvider;
 use ReflectionClass;
 
-abstract class TestCase extends \Illuminate\Foundation\Testing\TestCase
+abstract class TestCase extends BaseTestCase
 {
     /**
      * The base URL to use while testing the application.
@@ -23,7 +25,7 @@ abstract class TestCase extends \Illuminate\Foundation\Testing\TestCase
     {
         $app = require __DIR__.'/../vendor/laravel/laravel/bootstrap/app.php';
 
-        $app->register(\Pixelpeter\Genderize\GenderizeServiceProvider::class);
+        $app->register(GenderizeServiceProvider::class);
 
         $app->make(Kernel::class)->bootstrap();
 

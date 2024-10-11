@@ -1,13 +1,13 @@
 <?php
 
-namespace Pixelpeter\Genderize\Test;
+namespace Pixelpeter\Genderize\Tests\Unit\Models;
 
 use Pixelpeter\Genderize\Models\Name;
 
 class NameTest extends \PHPUnit\Framework\TestCase
 {
     /**
-     * @var \Pixelpeter\Genderize\Models\Name
+     * @var Name
      */
     protected $name;
 

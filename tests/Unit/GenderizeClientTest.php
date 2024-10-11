@@ -1,8 +1,10 @@
 <?php
 
-namespace Pixelpeter\Genderize;
+namespace Pixelpeter\Genderize\Tests\Unit;
 
 use Mockery;
+use Pixelpeter\Genderize\GenderizeClient;
+use Pixelpeter\Genderize\Tests\TestCase;
 use Unirest\Response;
 
 class GenderizeClientTest extends TestCase
@@ -52,7 +54,7 @@ class GenderizeClientTest extends TestCase
     public function name_works_correctly_with_string()
     {
         $this->client->name('John');
-        $names = $this->getPrivateProperty(\Pixelpeter\Genderize\GenderizeClient::class, 'names');
+        $names = $this->getPrivateProperty(GenderizeClient::class, 'names');
 
         $this->assertCount(1, $names->getValue($this->client));
         $this->assertSame('John', $names->getValue($this->client)[0]);
@@ -66,7 +68,7 @@ class GenderizeClientTest extends TestCase
     public function name_works_correctly_with_arrays()
     {
         $this->client->name(['John', 'Jane']);
-        $names = $this->getPrivateProperty(\Pixelpeter\Genderize\GenderizeClient::class, 'names');
+        $names = $this->getPrivateProperty(GenderizeClient::class, 'names');
 
         $this->assertCount(2, $names->getValue($this->client));
         $this->assertSame('John', $names->getValue($this->client)[0]);
@@ -81,7 +83,7 @@ class GenderizeClientTest extends TestCase
     public function names_works_correctly_with_arrays()
     {
         $this->client->names(['John', 'Jane']);
-        $names = $this->getPrivateProperty(\Pixelpeter\Genderize\GenderizeClient::class, 'names');
+        $names = $this->getPrivateProperty(GenderizeClient::class, 'names');
 
         $this->assertCount(2, $names->getValue($this->client));
         $this->assertSame('John', $names->getValue($this->client)[0]);
@@ -96,7 +98,7 @@ class GenderizeClientTest extends TestCase
     public function country_works_correctly()
     {
         $this->client->name('John')->country('US')->lang('EN');
-        $country = $this->getPrivateProperty(\Pixelpeter\Genderize\GenderizeClient::class, 'country');
+        $country = $this->getPrivateProperty(GenderizeClient::class, 'country');
 
         $this->assertSame('US', $country->getValue($this->client));
     }
@@ -109,7 +111,7 @@ class GenderizeClientTest extends TestCase
     public function lang_works_correctly()
     {
         $this->client->name('John')->country('US')->lang('EN');
-        $lang = $this->getPrivateProperty(\Pixelpeter\Genderize\GenderizeClient::class, 'lang');
+        $lang = $this->getPrivateProperty(GenderizeClient::class, 'lang');
 
         $this->assertSame('EN', $lang->getValue($this->client));
     }
@@ -135,13 +137,13 @@ class GenderizeClientTest extends TestCase
     public function name_is_reset_after_each_usage()
     {
         $this->client->name('John');
-        $names = $this->getPrivateProperty(\Pixelpeter\Genderize\GenderizeClient::class, 'names');
+        $names = $this->getPrivateProperty(GenderizeClient::class, 'names');
 
         $this->assertCount(1, $names->getValue($this->client));
         $this->assertSame('John', $names->getValue($this->client)[0]);
 
         $this->client->name('Jane');
-        $names = $this->getPrivateProperty(\Pixelpeter\Genderize\GenderizeClient::class, 'names');
+        $names = $this->getPrivateProperty(GenderizeClient::class, 'names');
 
         $this->assertCount(1, $names->getValue($this->client));
         $this->assertSame('Jane', $names->getValue($this->client)[0]);
