@@ -46,12 +46,7 @@ class GenderizeClientTest extends TestCase
         $this->client = new GenderizeClient($this->request);
     }
 
-    /**
-     * Name sets names correctly when given as a string
-     *
-     * @test
-     */
-    public function name_works_correctly_with_string()
+    public function test_name_works_correctly_with_string()
     {
         $this->client->name('John');
         $names = $this->getPrivateProperty(GenderizeClient::class, 'names');
@@ -60,12 +55,7 @@ class GenderizeClientTest extends TestCase
         $this->assertSame('John', $names->getValue($this->client)[0]);
     }
 
-    /**
-     * Name sets names correctly when given as an array
-     *
-     * @test
-     */
-    public function name_works_correctly_with_arrays()
+    public function test_name_works_correctly_with_arrays()
     {
         $this->client->name(['John', 'Jane']);
         $names = $this->getPrivateProperty(GenderizeClient::class, 'names');
@@ -75,12 +65,7 @@ class GenderizeClientTest extends TestCase
         $this->assertSame('Jane', $names->getValue($this->client)[1]);
     }
 
-    /**
-     * Names sets names correctly when given as an array
-     *
-     * @test
-     */
-    public function names_works_correctly_with_arrays()
+    public function test_names_works_correctly_with_arrays()
     {
         $this->client->names(['John', 'Jane']);
         $names = $this->getPrivateProperty(GenderizeClient::class, 'names');
@@ -90,12 +75,7 @@ class GenderizeClientTest extends TestCase
         $this->assertSame('Jane', $names->getValue($this->client)[1]);
     }
 
-    /**
-     * Country sets country correctly
-     *
-     * @test
-     */
-    public function country_works_correctly()
+    public function test_country_works_correctly()
     {
         $this->client->name('John')->country('US')->lang('EN');
         $country = $this->getPrivateProperty(GenderizeClient::class, 'country');
@@ -103,12 +83,7 @@ class GenderizeClientTest extends TestCase
         $this->assertSame('US', $country->getValue($this->client));
     }
 
-    /**
-     * Lang set lang correctly
-     *
-     * @test
-     */
-    public function lang_works_correctly()
+    public function test_lang_works_correctly()
     {
         $this->client->name('John')->country('US')->lang('EN');
         $lang = $this->getPrivateProperty(GenderizeClient::class, 'lang');
@@ -116,12 +91,7 @@ class GenderizeClientTest extends TestCase
         $this->assertSame('EN', $lang->getValue($this->client));
     }
 
-    /**
-     * Getting a response works correctly
-     *
-     * @test
-     */
-    public function get_works_correctly()
+    public function test_get_works_correctly()
     {
         $this->request->shouldReceive('get')->once()->andReturn($this->response);
         $response = $this->client->name('John')->get();
@@ -129,12 +99,7 @@ class GenderizeClientTest extends TestCase
         $this->assertInstanceOf('\Pixelpeter\Genderize\Models\GenderizeResponse', $response);
     }
 
-    /**
-     * Name variable is reset after each call to get()
-     *
-     * @test
-     */
-    public function name_is_reset_after_each_usage()
+    public function test_name_is_reset_after_each_usage()
     {
         $this->client->name('John');
         $names = $this->getPrivateProperty(GenderizeClient::class, 'names');

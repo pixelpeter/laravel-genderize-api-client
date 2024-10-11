@@ -26,12 +26,7 @@ class NameTest extends \PHPUnit\Framework\TestCase
         $this->name = new Name($data);
     }
 
-    /**
-     * Check data is set correctly
-     *
-     * @test
-     */
-    public function data_is_set_correctly()
+    public function test_data_is_set_correctly()
     {
         $this->assertSame('male', $this->name->gender);
         $this->assertSame('John', $this->name->name);
@@ -39,12 +34,7 @@ class NameTest extends \PHPUnit\Framework\TestCase
         $this->assertSame(1234, $this->name->count);
     }
 
-    /**
-     * Check default properties are added correctly
-     *
-     * @test
-     */
-    public function defaults_added_correctly()
+    public function test_defaults_added_correctly()
     {
         $data = (object) [];
 
@@ -56,42 +46,22 @@ class NameTest extends \PHPUnit\Framework\TestCase
         $this->assertNull($name->count);
     }
 
-    /**
-     * Check isMale() is working
-     *
-     * @test
-     */
-    public function isMale()
+    public function test_isMale()
     {
         $this->assertTrue($this->name->isMale());
     }
 
-    /**
-     *Check isNotMail() is working
-     *
-     * @test
-     */
-    public function isNotMale()
+    public function test_isNotMale()
     {
         $this->assertFalse($this->name->isNotMale());
     }
 
-    /**
-     * Check isFemale() is working
-     *
-     * @test
-     */
-    public function isFemale()
+    public function test_isFemale()
     {
         $this->assertFalse($this->name->isFemale());
     }
 
-    /**
-     * Check isNotFemail() is working
-     *
-     * @test
-     */
-    public function isNotFemale()
+    public function test_isNotFemale()
     {
         $this->assertTrue($this->name->isNotFemale());
     }

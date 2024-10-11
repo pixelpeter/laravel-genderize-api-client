@@ -7,12 +7,7 @@ use Unirest\Response;
 
 class GenderizeResponseTest extends \PHPUnit\Framework\TestCase
 {
-    /**
-     * It correctly parses a response with a single result
-     *
-     * @test
-     */
-    public function single_result_is_correctly_set()
+    public function test_single_result_is_correctly_set()
     {
         $response = new Response(
             200,
@@ -31,12 +26,7 @@ class GenderizeResponseTest extends \PHPUnit\Framework\TestCase
         $this->assertInstanceOf('Pixelpeter\Genderize\Models\Meta', $genderizeResponse->meta);
     }
 
-    /**
-     * It correctly parses a response with multiple results
-     *
-     * @test
-     */
-    public function multiple_result_is_correctly_set()
+    public function test_multiple_result_is_correctly_set()
     {
         $response = new Response(
             200,

@@ -29,12 +29,7 @@ class MetaTest extends \PHPUnit\Framework\TestCase
         $this->meta = new Meta($data);
     }
 
-    /**
-     * Check data is set correctly
-     *
-     * @test
-     */
-    public function data_is_set_correctly()
+    public function test_data_is_set_correctly()
     {
         $this->assertSame(200, $this->meta->code);
         $this->assertSame(7000, $this->meta->limit);
