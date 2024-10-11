@@ -49,7 +49,7 @@ class GenderizeClient
     /**
      * Fluent setter for names given as string
      *
-     * @param  string | array $name
+     * @param  string | array  $name
      * @return $this|GenderizeClient
      */
     public function name($name = '')
