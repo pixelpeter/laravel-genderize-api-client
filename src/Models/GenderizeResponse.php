@@ -32,7 +32,7 @@ class GenderizeResponse extends BaseModel
 
     protected function returnWithCollection($response)
     {
-        $collection = new Collection();
+        $collection = new Collection;
 
         foreach ($response->body as $row) {
             $collection->push(new Name($row));

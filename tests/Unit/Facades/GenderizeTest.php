@@ -1,9 +1,9 @@
 <?php
 
-namespace Pixelpeter\Genderize\Test;
+namespace Pixelpeter\Genderize\Tests\Unit\Facades;
 
 use Pixelpeter\Genderize\Facades\Genderize;
-use Pixelpeter\Genderize\TestCase;
+use Pixelpeter\Genderize\Tests\TestCase;
 
 class GenderizeTest extends TestCase
 {
