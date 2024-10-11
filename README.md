@@ -17,9 +17,10 @@ It provides a fluent interface for easy request building.
 
 | Laravel | php           | use repository                                              | use branch  |
 |---------|---------------| ----------------------------------------------------------  |-------------|
+| 11.x    | 8.3, 8.2      | https://github.com/pixelpeter/laravel-genderize-api-client  | master      |
 | 10.x    | 8.2, 8.1      | https://github.com/pixelpeter/laravel-genderize-api-client  | master      |
-| 9.x     | 8.2, 8.1, 8.0 | https://github.com/pixelpeter/laravel-genderize-api-client  | master      |
-| 8.x     | 8.2, 8.1, 8.0 | https://github.com/pixelpeter/laravel-genderize-api-client  | master      |
+| 9.x     | 8.2, 8.1, 8.0 | https://github.com/pixelpeter/laravel-genderize-api-client  | v8.x        |
+| 8.x     | 8.2, 8.1, 8.0 | https://github.com/pixelpeter/laravel-genderize-api-client  | v8.x        |
 | 5.7     | 7.3, 7.2, 7.1 | https://github.com/pixelpeter/laravel5-genderize-api-client | 2.0.x       |
 | 5.6     | 7.3, 7.2, 7.1 | https://github.com/pixelpeter/laravel5-genderize-api-client | 2.0.x       |
 | 5.5     | 7.2, 7.1, 7.0 | https://github.com/pixelpeter/laravel5-genderize-api-client | 1.1.x/2.0.x |
