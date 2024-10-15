@@ -2,7 +2,6 @@
 
 namespace Pixelpeter\Genderize\Tests;
 
-use Illuminate\Contracts\Console\Kernel;
 use Orchestra\Testbench\TestCase as BaseTestCase;
 use Pixelpeter\Genderize\GenderizeServiceProvider;
 use ReflectionClass;
