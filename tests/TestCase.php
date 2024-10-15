@@ -2,7 +2,6 @@
 
 namespace Pixelpeter\Genderize\Tests;
 
-use Illuminate\Contracts\Console\Kernel;
 use Orchestra\Testbench\TestCase as BaseTestCase;
 use Pixelpeter\Genderize\GenderizeServiceProvider;
 use ReflectionClass;
@@ -19,7 +18,7 @@ abstract class TestCase extends BaseTestCase
     /**
      * Get package providers.
      *
-     * @param \Illuminate\Foundation\Application $app
+     * @param  \Illuminate\Foundation\Application  $app
      * @return array<int, class-string<\Illuminate\Support\ServiceProvider>>
      */
     protected function getPackageProviders($app)
