@@ -14,7 +14,7 @@ class NameTest extends \PHPUnit\Framework\TestCase
     /**
      * Set up
      */
-    public function setUp(): void
+    protected function setUp(): void
     {
         $data = (object) [
             'gender' => 'male',
@@ -46,22 +46,22 @@ class NameTest extends \PHPUnit\Framework\TestCase
         $this->assertNull($name->count);
     }
 
-    public function test_isMale()
+    public function test_is_male()
     {
         $this->assertTrue($this->name->isMale());
     }
 
-    public function test_isNotMale()
+    public function test_is_not_male()
     {
         $this->assertFalse($this->name->isNotMale());
     }
 
-    public function test_isFemale()
+    public function test_is_female()
     {
         $this->assertFalse($this->name->isFemale());
     }
 
-    public function test_isNotFemale()
+    public function test_is_not_female()
     {
         $this->assertTrue($this->name->isNotFemale());
     }

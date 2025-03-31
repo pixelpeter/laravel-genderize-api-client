@@ -13,10 +13,13 @@ jobs:
       fail-fast: true
       matrix:
         os: [ubuntu-latest]
-        php: [8.3, 8.2, 8.1]
-        laravel: [11.*, 10.*]
+        php: [8.4, 8.3, 8.2, 8.1]
+        laravel: [12.*, 11.*, 10.*]
         stability: [prefer-stable]
         include:
+          - laravel: 12.*
+            testbench: 10.*
+            carbon: ^3.8.4
           - laravel: 11.*
             testbench: 9.*
             carbon: ^2.66
@@ -25,6 +28,8 @@ jobs:
             carbon: ^2.66
         exclude:
           - laravel: 11.*
+            php: 8.1
+          - laravel: 12.*
             php: 8.1
     name: P${{ matrix.php }} - L${{ matrix.laravel }} - ${{ matrix.stability }} - ${{ matrix.os }}
     steps:
@@ -55,7 +60,9 @@ jobs:
         run: vendor/bin/phpunit --coverage-clover build/logs/clover.xml
 
       - name: Upload coverage results to Coveralls
+        uses: coverallsapp/github-action@v2
         env:
-          COVERALLS_REPO_TOKEN: ${{ secrets.COVERALLS_REPO_TOKEN }}
-        run: |
-          vendor/bin/php-coveralls --coverage_clover=build/logs/clover.xml -v        
+          github-token: ${{ secrets.COVERALLS_REPO_TOKEN }}
+          # Note: This is the only path that the Coveralls GitHub Action supports.
+          # So we cannot use something like .Build/coverage/clover.xml here.
+          file: build/logs/clover.xml
