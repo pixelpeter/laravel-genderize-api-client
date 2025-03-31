@@ -34,6 +34,6 @@ class Meta extends BaseModel
     {
         $date = Carbon::now();
 
-        return $date->addSeconds((int)$data);
+        return $date->addSeconds((int) $data);
     }
 }

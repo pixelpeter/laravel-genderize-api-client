@@ -15,7 +15,7 @@ class MetaTest extends \PHPUnit\Framework\TestCase
     /**
      * Set up
      */
-    public function setUp(): void
+    protected function setUp(): void
     {
         $data = (object) [
             'code' => 200,
