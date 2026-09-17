@@ -1,4 +1,4 @@
-# Laravel 8+ Genderize.io API Client
+# Laravel 12+ Genderize.io API Client
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/pixelpeter/laravel-genderize-api-client.svg?style=flat-square)](https://packagist.org/packages/pixelpeter/laravel-genderize-api-client)
 [![Total Downloads](https://img.shields.io/packagist/dt/pixelpeter/laravel-genderize-api-client.svg?style=flat-square)](https://packagist.org/packages/pixelpeter/laravel-genderize-api-client)
@@ -9,19 +9,34 @@
 [![PHPStan](https://github.com/pixelpeter/laravel-genderize-api-client/actions/workflows/phpstan.yml/badge.svg)](https://github.com/pixelpeter/laravel-genderize-api-client/actions/workflows/phpstan.yml)
 [![dependabot-auto-merge](https://github.com/pixelpeter/laravel-genderize-api-client/actions/workflows/dependabot-auto-merge.yml/badge.svg)](https://github.com/pixelpeter/laravel-genderize-api-client/actions/workflows/dependabot-auto-merge.yml)
 
-A simple Laravel 8+ client for the [Genderize.io API](https://genderize.io/).
+A simple Laravel 12+ client for the [Genderize.io API](https://genderize.io/).
 It provides a fluent interface for easy request building.
 
 ## Version overview
 
-| Laravel    | php           | use repository                                              | use branch/tag |
-|------------|---------------| ----------------------------------------------------------  |----------------|
-| 12.x, 11.x | 8.4, 8.3, 8.2 | https://github.com/pixelpeter/laravel-genderize-api-client  | master, v12.x  |
-| 10.x       | 8.3, 8.2, 8.1 | https://github.com/pixelpeter/laravel-genderize-api-client  | master, v10.x  |
-| 9.x, 8.x   | 8.2, 8.1, 8.0 | https://github.com/pixelpeter/laravel-genderize-api-client  | v8.x           |
-| 5.7, 5.6   | 7.3, 7.2, 7.1 | https://github.com/pixelpeter/laravel5-genderize-api-client | 2.0.x          |
-| 5.5        | 7.2, 7.1, 7.0 | https://github.com/pixelpeter/laravel5-genderize-api-client | 1.1.x/2.0.x    |
+From `v13.0.0` on, the package major version matches the highest Laravel major version it supports. `v13.0.0` supports
+Laravel 13.x and 12.x. This is the only maintained line: `master` is where it is developed, and the `v13.x` branch
+tracks it and carries the released state.
 
+| Laravel    | php           | composer | branch        |
+|------------|---------------|----------|---------------|
+| 13.x, 12.x | 8.5, 8.4, 8.3 | `^13.0`  | master, v13.x |
+
+### Deprecated releases
+
+Earlier releases stay installable and unchanged, but they are no longer maintained: they receive no fixes and no
+further releases. Laravel 11.x and 10.x are past their security support window, and Composer refuses to install them
+because of published security advisories.
+
+| Laravel    | php           | composer | tag      | status                            |
+|------------|---------------|----------|----------|-----------------------------------|
+| 12.x, 11.x | 8.4, 8.3, 8.2 | `^12.0`  | v12.0.0  | deprecated, superseded by `^13.0` |
+| 10.x       | 8.3, 8.2, 8.1 | `^10.0`  | v10.2.0  | deprecated, no successor          |
+| 9.x, 8.x   | 8.2, 8.1, 8.0 | `^8.0`   | v8.2.0   | deprecated, no successor          |
+
+The Laravel 5.x releases live in the archived
+[pixelpeter/laravel5-genderize-api-client](https://github.com/pixelpeter/laravel5-genderize-api-client) repository:
+`2.0.x` for Laravel 5.7 and 5.6, `1.1.x`/`2.0.x` for Laravel 5.5. That repository is read-only.
 
 ## Installation
 
@@ -30,14 +45,11 @@ It provides a fluent interface for easy request building.
 composer require pixelpeter/laravel-genderize-api-client
 ```
 
-### Step 2: Add the Facade
-Add the alias in `app/config/app.php`
+### Step 2: Use the Facade
+Package discovery registers the service provider and the `Genderize` alias, so there is nothing to add by hand. If you
+have disabled discovery for this package, register the alias in `bootstrap/app.php` or use the facade class directly:
 ```php
-'aliases' => [
-    ...
-    'Genderize' => Pixelpeter\Genderize\Facades\Genderize::class,
-    ...
-];
+use Pixelpeter\Genderize\Facades\Genderize;
 ```
 ### Step 3: Publish the configuration file
 This is only needed when you have an API key from Genderize.io
