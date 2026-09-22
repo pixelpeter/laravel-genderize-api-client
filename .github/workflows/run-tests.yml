@@ -52,6 +52,14 @@ jobs:
 
       - name: Upload coverage results to Coveralls
         uses: coverallsapp/github-action@v2
+        with:
+          # The action installs its reporter by downloading a checksum file
+          # from GitHub releases. When GitHub serves an error page instead,
+          # the step exits 1 with "Checksum verification failed (Linux)" and
+          # fails the build over a coverage upload. Every exit in that script
+          # is guarded by this input, so a transient outage no longer reds a
+          # run whose tests passed.
+          fail-on-error: false
         env:
           github-token: ${{ secrets.COVERALLS_REPO_TOKEN }}
           # Note: This is the only path that the Coveralls GitHub Action supports.
